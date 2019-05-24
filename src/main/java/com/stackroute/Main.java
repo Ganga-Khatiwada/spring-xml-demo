@@ -30,6 +30,9 @@ public class Main {
         Movie movie1 = (Movie) context.getBean("movie1");
         System.out.println(movie1);
 
+        ClassPathXmlApplicationContext cxt=(ClassPathXmlApplicationContext)context;
+        cxt.destroy();
+
         //testing scope
 
 //        ApplicationContext context1 = new ClassPathXmlApplicationContext("beans.xml");
