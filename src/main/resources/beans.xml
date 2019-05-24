@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--<bean id="movie" class="com.stackroute.domain.Movie">-->
+<!--    <property name="movieId" value="1"></property>-->
+<!--    <property name="movieName" value="Yeh Jawani Hai Deewani"></property>-->
+<!--    <property name="actor" ref="actor"></property>-->
+<!--</bean>-->
+
+<!--<bean id="actor" class="com.stackroute.domain.Actor">-->
+<!--    <property name="name" value="Aniruddha Timsina"></property>-->
+<!--    <property name="gender" value="Male"></property>-->
+<!--    <property name="age" value="24"></property>-->
+<!--</bean>-->
+
+
+
+<!--    <bean id="movie" class="com.stackroute.domain.Movie">-->
+<!--        <constructor-arg name="movieId" value="1"></constructor-arg>-->
+<!--        <constructor-arg name="movieName" value="Yeh Jawani Hai Deewani"></constructor-arg>-->
+<!--        <constructor-arg name="actor" ref="actor"></constructor-arg>-->
+<!--    </bean>-->
+
+<!--    <bean id="actor" class="com.stackroute.domain.Actor">-->
+<!--        <constructor-arg name="name" value="Aniruddha Timsina"></constructor-arg>-->
+<!--        <constructor-arg name="gender" value="Male"></constructor-arg>-->
+<!--        <constructor-arg name="age" value="24"></constructor-arg>-->
+<!--    </bean>-->
+
+
+    <bean id="movie" class="com.stackroute.domain.Movie" scope="prototype">
+        <constructor-arg type="int" value="1"></constructor-arg>
+        <constructor-arg type="String" value="Yeh Jawani Hai Deewani"></constructor-arg>
+        <constructor-arg type="Actor" ref="actor"></constructor-arg>
+    </bean>
+
+    <bean id="actor" class="com.stackroute.domain.Actor">
+        <constructor-arg index="0" value="Aniruddha Timsina"></constructor-arg>
+        <constructor-arg index="1" value="Male"></constructor-arg>
+        <constructor-arg index="2" value="24"></constructor-arg>
+    </bean>
+
+
+</beans>
