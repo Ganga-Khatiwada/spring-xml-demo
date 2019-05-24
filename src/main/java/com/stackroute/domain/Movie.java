@@ -11,6 +11,10 @@ public class Movie {
         this.actor = actor;
     }
 
+    public Movie(Actor actor) {
+        this.actor = actor;
+    }
+
     public int getMovieId() {
         return movieId;
     }

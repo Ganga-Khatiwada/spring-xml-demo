@@ -31,9 +31,35 @@
 <!--    </bean>-->
 
 
-    <bean id="movie" class="com.stackroute.domain.Movie" scope="prototype">
-        <constructor-arg type="int" value="1"></constructor-arg>
-        <constructor-arg type="String" value="Yeh Jawani Hai Deewani"></constructor-arg>
+<!--    <bean id="movie" class="com.stackroute.domain.Movie" scope="prototype">-->
+<!--        <constructor-arg type="int" value="1"></constructor-arg>-->
+<!--        <constructor-arg type="String" value="Yeh Jawani Hai Deewani"></constructor-arg>-->
+<!--        <constructor-arg type="Actor" ref="actor"></constructor-arg>-->
+<!--    </bean>-->
+
+<!--    <bean id="actor" class="com.stackroute.domain.Actor">-->
+<!--        <constructor-arg index="0" value="Aniruddha Timsina"></constructor-arg>-->
+<!--        <constructor-arg index="1" value="Male"></constructor-arg>-->
+<!--        <constructor-arg index="2" value="24"></constructor-arg>-->
+<!--    </bean>-->
+
+
+<!--    <bean name="movie1,movie2" class="com.stackroute.domain.Movie" scope="prototype">-->
+<!--        <constructor-arg type="int" value="1"></constructor-arg>-->
+<!--        <constructor-arg type="String" value="Yeh Jawani Hai Deewani"></constructor-arg>-->
+<!--        <constructor-arg type="Actor" ref="actor"></constructor-arg>-->
+<!--    </bean>-->
+
+<!--    <bean id="actor" class="com.stackroute.domain.Actor">-->
+<!--        <constructor-arg index="0" value="Aniruddha Timsina"></constructor-arg>-->
+<!--        <constructor-arg index="1" value="Male"></constructor-arg>-->
+<!--        <constructor-arg index="2" value="24"></constructor-arg>-->
+<!--    </bean>-->
+
+
+    <bean name="movie1,movie2" class="com.stackroute.domain.Movie" autowire="byName" >
+<!--        <constructor-arg type="int" value="1"></constructor-arg>-->
+<!--        <constructor-arg type="String" value="Yeh Jawani Hai Deewani"></constructor-arg>-->
         <constructor-arg type="Actor" ref="actor"></constructor-arg>
     </bean>
 
@@ -42,6 +68,5 @@
         <constructor-arg index="1" value="Male"></constructor-arg>
         <constructor-arg index="2" value="24"></constructor-arg>
     </bean>
-
 
 </beans>
